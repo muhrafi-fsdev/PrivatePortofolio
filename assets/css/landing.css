@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1E3A5F 0%, #152842 50%, #0F1C2E 100%);
+    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #0d1421 100%);
     transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
     overflow: hidden;
 }
@@ -39,53 +39,69 @@
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse at 20% 30%, rgba(230, 57, 70, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 70%, rgba(255, 214, 10, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, rgba(46, 90, 143, 0.1) 0%, transparent 70%);
+        radial-gradient(ellipse at 20% 30%, rgba(211, 47, 47, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(255, 214, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(57, 73, 171, 0.2) 0%, transparent 70%);
 }
 
-/* Animated Grid Pattern */
+/* Animated Grid Pattern - Mecha Style */
 .landing-particles {
     position: absolute;
     inset: 0;
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: gridMove 20s linear infinite;
+        linear-gradient(rgba(255, 214, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 214, 0, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 30s linear infinite;
+}
+
+.landing-particles::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(45deg, transparent 40%, rgba(211, 47, 47, 0.03) 50%, transparent 60%);
+    animation: scanLine 4s ease-in-out infinite;
 }
 
 @keyframes gridMove {
     0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+    100% { transform: translate(60px, 60px); }
 }
 
-/* Floating Geometric Shapes */
+@keyframes scanLine {
+    0%, 100% { transform: translateY(-100%); }
+    50% { transform: translateY(100%); }
+}
+
+/* Floating Geometric Shapes - Mecha Panels */
 .landing-bg::before {
     content: '';
     position: absolute;
-    width: 300px;
-    height: 300px;
-    border: 2px solid rgba(255, 214, 10, 0.1);
-    top: 10%;
-    right: 10%;
-    animation: rotateShape 30s linear infinite;
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgba(255, 214, 0, 0.2);
+    top: 15%;
+    right: 15%;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+    animation: floatShape 8s ease-in-out infinite;
 }
 
 .landing-bg::after {
     content: '';
     position: absolute;
-    width: 200px;
-    height: 200px;
-    border: 2px solid rgba(230, 57, 70, 0.1);
-    bottom: 15%;
-    left: 10%;
-    animation: rotateShape 25s linear infinite reverse;
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(211, 47, 47, 0.2);
+    bottom: 20%;
+    left: 15%;
+    clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
+    animation: floatShape 6s ease-in-out infinite reverse;
 }
 
-@keyframes rotateShape {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes floatShape {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+    50% { transform: translate(10px, -10px) rotate(2deg); opacity: 0.6; }
 }
 
 /* Content Container */
@@ -97,48 +113,49 @@
     max-width: 650px;
 }
 
-/* Logo */
+/* Logo - Gundam Style */
 .landing-logo {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 35px;
-    background: linear-gradient(135deg, #FFD60A 0%, #FFC300 50%, #E63946 100%);
-    border-radius: 28px;
+    background: linear-gradient(135deg, #ffd600 0%, #ffab00 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     animation: logoFloat 4s ease-in-out infinite;
     box-shadow: 
-        0 20px 60px rgba(255, 214, 10, 0.3),
-        0 0 0 4px rgba(255, 255, 255, 0.1);
+        0 0 0 4px #d32f2f,
+        0 0 0 8px rgba(255, 214, 0, 0.3),
+        0 20px 60px rgba(255, 214, 0, 0.3);
     position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
 }
 
 .landing-logo::before {
     content: '';
     position: absolute;
-    inset: -8px;
-    border: 2px solid rgba(255, 214, 10, 0.3);
-    border-radius: 34px;
+    inset: -12px;
+    border: 2px solid rgba(255, 214, 0, 0.4);
+    clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
     animation: logoPulse 2s ease-in-out infinite;
 }
 
 @keyframes logoFloat {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+    50% { transform: translateY(-15px); }
 }
 
 @keyframes logoPulse {
     0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 0; }
 }
 
 .logo-letter {
-    font-size: 3.2rem;
-    font-weight: 800;
-    color: #1E3A5F;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #1a237e;
     font-family: 'Outfit', sans-serif;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.3);
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* Title */
@@ -147,13 +164,17 @@
 }
 
 .title-greeting {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: rgba(255, 214, 10, 0.8);
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffd600;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 16px;
+    padding: 8px 20px;
+    background: rgba(211, 47, 47, 0.3);
+    border: 2px solid #d32f2f;
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
     animation: fadeSlideUp 0.8s ease forwards;
     animation-delay: 0.2s;
     opacity: 0;
@@ -161,12 +182,12 @@
 
 .title-name {
     display: block;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    background: linear-gradient(135deg, #FFFFFF 0%, #FFD60A 50%, #E63946 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 
+        4px 4px 0 #d32f2f,
+        -1px -1px 0 #1a237e;
     animation: fadeSlideUp 0.8s ease forwards;
     animation-delay: 0.4s;
     opacity: 0;
@@ -186,21 +207,23 @@
 
 /* Subtitle */
 .landing-subtitle {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 45px;
     animation: fadeSlideUp 0.8s ease forwards;
     animation-delay: 0.6s;
     opacity: 0;
     font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    padding: 0 20px;
 }
 
 /* Stats */
 .landing-stats {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-bottom: 45px;
+    gap: 40px;
+    margin-bottom: 50px;
     animation: fadeSlideUp 0.8s ease forwards;
     animation-delay: 0.8s;
     opacity: 0;
@@ -209,58 +232,61 @@
 .landing-stat {
     text-align: center;
     position: relative;
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 214, 0, 0.3);
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    transition: all 0.3s ease;
+}
+
+.landing-stat:hover {
+    border-color: #ffd600;
+    background: rgba(255, 214, 0, 0.1);
+    transform: translateY(-5px);
 }
 
 .landing-stat::after {
-    content: '';
-    position: absolute;
-    right: -25px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 214, 10, 0.3), transparent);
-}
-
-.landing-stat:last-child::after {
     display: none;
 }
 
 .stat-num {
     display: block;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #FFD60A;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ffd600;
     line-height: 1.2;
     margin-bottom: 6px;
     font-family: 'JetBrains Mono', monospace;
+    text-shadow: 2px 2px 0 rgba(211, 47, 47, 0.5);
 }
 
 .stat-text {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-/* CTA Button */
+/* CTA Button - Mecha Style */
 .landing-cta {
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    padding: 18px 45px;
-    background: linear-gradient(135deg, #E63946 0%, #C1121F 100%);
+    padding: 18px 50px;
+    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
     color: white;
     border: none;
-    border-radius: 50px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
     box-shadow: 
-        0 10px 40px rgba(230, 57, 70, 0.4),
-        0 0 0 0 rgba(230, 57, 70, 0.4);
+        0 0 0 3px #ffd600,
+        6px 6px 0 rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
     font-family: 'Outfit', sans-serif;
     animation: fadeSlideUp 0.8s ease forwards;
     animation-delay: 1s;
@@ -276,7 +302,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     transition: left 0.5s ease;
 }
 
@@ -285,10 +311,10 @@
 }
 
 .landing-cta:hover {
-    transform: translateY(-4px) scale(1.02);
+    transform: translate(-3px, -3px);
     box-shadow: 
-        0 20px 50px rgba(230, 57, 70, 0.5),
-        0 0 0 4px rgba(230, 57, 70, 0.2);
+        0 0 0 3px #ffd600,
+        9px 9px 0 rgba(0,0,0,0.4);
 }
 
 .landing-cta svg {
@@ -302,12 +328,13 @@
 /* Scroll Hint */
 .landing-scroll-hint {
     margin-top: 60px;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
     animation: fadeSlideUp 0.8s ease forwards;
     animation-delay: 1.2s;
     opacity: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .scroll-arrow {

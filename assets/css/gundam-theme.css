@@ -1,0 +1,718 @@
+/* ============================================
+   GUNDAM THEME OVERRIDE
+   Dynamic Mecha-Inspired Design
+   ============================================ */
+
+/* ============================================
+   GUNDAM COLOR PALETTE
+   ============================================ */
+:root {
+    /* Core Gundam Colors */
+    --gd-white: #FFFFFF;
+    --gd-blue-dark: #1a237e;
+    --gd-blue: #283593;
+    --gd-blue-light: #3949ab;
+    --gd-red: #d32f2f;
+    --gd-red-dark: #b71c1c;
+    --gd-red-light: #ef5350;
+    --gd-yellow: #ffd600;
+    --gd-yellow-dark: #ffab00;
+    --gd-gold: #ffc107;
+    --gd-gray: #37474f;
+    --gd-gray-light: #546e7a;
+    --gd-dark: #0d1421;
+    
+    /* Gradients */
+    --gd-gradient-blue: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+    --gd-gradient-red: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);
+    --gd-gradient-yellow: linear-gradient(135deg, #ffd600 0%, #ffab00 100%);
+    --gd-gradient-metal: linear-gradient(135deg, #eceff1 0%, #cfd8dc 50%, #b0bec5 100%);
+}
+
+/* ============================================
+   HERO SECTION - GUNDAM STYLE
+   ============================================ */
+.hero-bg-left {
+    background: var(--gd-gradient-blue) !important;
+    position: relative;
+}
+
+.hero-bg-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(90deg, transparent 49.5%, rgba(255,214,0,0.1) 49.5%, rgba(255,214,0,0.1) 50.5%, transparent 50.5%),
+        linear-gradient(0deg, transparent 49.5%, rgba(255,214,0,0.05) 49.5%, rgba(255,214,0,0.05) 50.5%, transparent 50.5%);
+    background-size: 100px 100px;
+    animation: gridPulse 4s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+.hero-bg-right {
+    background: var(--gd-gradient-yellow) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-right::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255,255,255,0.1) 20px,
+        rgba(255,255,255,0.1) 40px
+    );
+    animation: stripeMove 20s linear infinite;
+}
+
+@keyframes stripeMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 40px); }
+}
+
+/* Hero Content Text - Better Contrast */
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-tag {
+    background: var(--gd-red) !important;
+    color: var(--gd-white) !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 8px 20px !important;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-title {
+    color: var(--gd-white) !important;
+    text-shadow: 
+        3px 3px 0 var(--gd-blue-dark),
+        -1px -1px 0 var(--gd-blue-dark),
+        1px -1px 0 var(--gd-blue-dark),
+        -1px 1px 0 var(--gd-blue-dark);
+    font-weight: 900 !important;
+}
+
+.hero-title-highlight {
+    color: var(--gd-yellow) !important;
+    text-shadow: 
+        3px 3px 0 var(--gd-red-dark),
+        -1px -1px 0 var(--gd-red-dark);
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    font-weight: 400;
+    background: rgba(0,0,0,0.2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--gd-yellow);
+}
+
+.highlight-item {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.highlight-bullet {
+    background: var(--gd-yellow) !important;
+    box-shadow: 0 0 10px var(--gd-yellow);
+}
+
+/* Hero Buttons - Mecha Style */
+.hero-cta .btn-primary {
+    background: var(--gd-gradient-red) !important;
+    border: none;
+    color: white !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 32px;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.hero-cta .btn-primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.4);
+}
+
+.hero-cta .btn-outline {
+    background: transparent;
+    border: 3px solid var(--gd-yellow) !important;
+    color: var(--gd-yellow) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.hero-cta .btn-outline:hover {
+    background: var(--gd-yellow);
+    color: var(--gd-blue-dark) !important;
+}
+
+/* Hero Image Frame - Mecha Panel */
+.image-frame {
+    position: relative;
+}
+
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+    border: 4px solid var(--gd-red);
+    z-index: -1;
+}
+
+.image-frame::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    border: 4px solid var(--gd-blue);
+    z-index: -1;
+}
+
+.image-wrapper {
+    border: 4px solid var(--gd-white) !important;
+    box-shadow: 
+        0 0 0 4px var(--gd-blue-dark),
+        8px 8px 0 var(--gd-yellow);
+}
+
+.image-label {
+    background: var(--gd-red) !important;
+    color: var(--gd-white) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 8px);
+}
+
+.label-dot {
+    background: var(--gd-yellow) !important;
+    box-shadow: 0 0 8px var(--gd-yellow);
+}
+
+/* ============================================
+   ABOUT SECTION - GUNDAM STYLE
+   ============================================ */
+.about {
+    background: var(--gd-white) !important;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--gd-blue) 0%, var(--gd-blue) 33%, var(--gd-red) 33%, var(--gd-red) 66%, var(--gd-yellow) 66%, var(--gd-yellow) 100%);
+}
+
+.section-tag {
+    color: var(--gd-red) !important;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.section-title {
+    color: var(--gd-blue-dark) !important;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gd-yellow);
+}
+
+.about-intro {
+    color: var(--gd-gray) !important;
+}
+
+.text-highlight {
+    color: var(--gd-red) !important;
+    font-weight: 700;
+}
+
+.about-text strong {
+    color: var(--gd-blue-dark) !important;
+}
+
+/* Stats Cards - Mecha Panels */
+.stat-card {
+    background: var(--gd-white) !important;
+    border: 3px solid var(--gd-blue) !important;
+    border-radius: 0 !important;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    transition: all 0.3s ease;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gd-yellow);
+}
+
+.stat-card:hover {
+    border-color: var(--gd-red) !important;
+    transform: translateY(-8px);
+    box-shadow: 8px 8px 0 rgba(26, 35, 126, 0.2);
+}
+
+.stat-card .stat-number {
+    color: var(--gd-blue-dark) !important;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.stat-card:hover .stat-number {
+    color: var(--gd-red) !important;
+}
+
+.stat-card .stat-label {
+    color: var(--gd-gray) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+/* ============================================
+   PROJECTS SECTION - GUNDAM STYLE
+   ============================================ */
+.projects {
+    background: #f5f5f5 !important;
+    position: relative;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, transparent 49.8%, rgba(26, 35, 126, 0.03) 49.8%, rgba(26, 35, 126, 0.03) 50.2%, transparent 50.2%),
+        linear-gradient(0deg, transparent 49.8%, rgba(26, 35, 126, 0.03) 49.8%, rgba(26, 35, 126, 0.03) 50.2%, transparent 50.2%);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+/* Project Cards - Mecha Panels */
+.project-card {
+    background: var(--gd-white) !important;
+    border: 3px solid var(--gd-blue) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gd-red) 0%, var(--gd-yellow) 100%);
+    z-index: 10;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--gd-yellow);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: var(--gd-red) !important;
+    transform: translateY(-12px);
+    box-shadow: 12px 12px 0 rgba(26, 35, 126, 0.15);
+}
+
+.project-card:hover::after {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+}
+
+/* Project Badge */
+.project-badge {
+    background: var(--gd-yellow) !important;
+    color: var(--gd-blue-dark) !important;
+    border-radius: 0 !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 8px);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+/* Project Image */
+.project-image {
+    border: 3px solid var(--gd-blue-dark) !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+}
+
+.project-overlay {
+    background: linear-gradient(to top, rgba(26, 35, 126, 0.95) 0%, transparent 100%) !important;
+}
+
+/* Project Header */
+.project-icon {
+    background: var(--gd-gradient-blue) !important;
+    color: var(--gd-yellow) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.project-title {
+    color: var(--gd-blue-dark) !important;
+    font-weight: 800;
+}
+
+.project-description {
+    color: var(--gd-gray) !important;
+}
+
+/* Tech Tags - Gundam Colors */
+.tech-tag {
+    border-radius: 0 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+}
+
+.tech-tag:nth-child(1) {
+    background: rgba(26, 35, 126, 0.1) !important;
+    color: var(--gd-blue-dark) !important;
+    border: 2px solid var(--gd-blue) !important;
+}
+
+.tech-tag:nth-child(2) {
+    background: rgba(211, 47, 47, 0.1) !important;
+    color: var(--gd-red) !important;
+    border: 2px solid var(--gd-red) !important;
+}
+
+.tech-tag:nth-child(3) {
+    background: rgba(255, 214, 0, 0.2) !important;
+    color: #b8860b !important;
+    border: 2px solid var(--gd-yellow) !important;
+}
+
+.tech-tag:nth-child(4) {
+    background: rgba(55, 71, 79, 0.1) !important;
+    color: var(--gd-gray) !important;
+    border: 2px solid var(--gd-gray) !important;
+}
+
+.tech-tag:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Project Actions */
+.project-actions .btn-primary {
+    background: var(--gd-gradient-red) !important;
+    color: white !important;
+    border: none;
+    border-radius: 0 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.project-actions .btn-outline {
+    background: transparent;
+    border: 2px solid var(--gd-blue-dark) !important;
+    color: var(--gd-blue-dark) !important;
+    border-radius: 0 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-actions .btn-outline:hover {
+    background: var(--gd-blue-dark);
+    color: white !important;
+}
+
+/* ============================================
+   SKILLS SECTION - GUNDAM STYLE
+   ============================================ */
+.skills {
+    background: var(--gd-gradient-blue) !important;
+    position: relative;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 100px,
+            rgba(255, 214, 0, 0.03) 100px,
+            rgba(255, 214, 0, 0.03) 102px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 100px,
+            rgba(255, 214, 0, 0.03) 100px,
+            rgba(255, 214, 0, 0.03) 102px
+        );
+    pointer-events: none;
+}
+
+.skills .section-tag {
+    color: var(--gd-yellow) !important;
+}
+
+.skills .section-title {
+    color: var(--gd-white) !important;
+}
+
+.skills .section-title::after {
+    background: var(--gd-red);
+}
+
+/* Skill Categories - Mecha Panels */
+.skill-category {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 2px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0 !important;
+    backdrop-filter: blur(10px);
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gd-yellow);
+}
+
+.skill-category:hover {
+    border-color: var(--gd-yellow) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    transform: translateY(-5px);
+}
+
+.category-title {
+    color: var(--gd-yellow) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-title svg {
+    color: var(--gd-red) !important;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--gd-white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0 !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--gd-red) !important;
+    border-color: var(--gd-red) !important;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   CONTACT SECTION - GUNDAM STYLE
+   ============================================ */
+.contact {
+    background: var(--gd-white) !important;
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--gd-blue) 0%, var(--gd-blue) 33%, var(--gd-red) 33%, var(--gd-red) 66%, var(--gd-yellow) 66%, var(--gd-yellow) 100%);
+}
+
+.contact-intro {
+    color: var(--gd-gray) !important;
+}
+
+/* Contact Links - Mecha Panels */
+.contact-link {
+    background: var(--gd-white) !important;
+    border: 2px solid var(--gd-blue) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    border-color: var(--gd-red) !important;
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0 rgba(26, 35, 126, 0.1);
+}
+
+.contact-icon {
+    background: var(--gd-gradient-blue) !important;
+    color: var(--gd-yellow) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.contact-label {
+    color: var(--gd-gray-light) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+}
+
+.contact-value {
+    color: var(--gd-blue-dark) !important;
+    font-weight: 600;
+}
+
+/* ============================================
+   FOOTER - GUNDAM STYLE
+   ============================================ */
+.footer {
+    background: var(--gd-blue-dark) !important;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gd-red) 0%, var(--gd-yellow) 50%, var(--gd-red) 100%);
+}
+
+/* ============================================
+   NAVBAR - GUNDAM STYLE
+   ============================================ */
+.navbar.scrolled {
+    background: rgba(26, 35, 126, 0.98) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--gd-white) !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: var(--gd-yellow) !important;
+}
+
+.navbar.scrolled .nav-link-cta {
+    background: var(--gd-red) !important;
+    color: var(--gd-white) !important;
+}
+
+.navbar.scrolled .logo-bracket {
+    color: var(--gd-yellow) !important;
+}
+
+.navbar.scrolled .logo-text {
+    color: var(--gd-white) !important;
+}
+
+/* ============================================
+   ANIMATIONS - MECHA EFFECTS
+   ============================================ */
+@keyframes mechaScan {
+    0% { transform: translateY(-100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes mechaGlow {
+    0%, 100% { box-shadow: 0 0 5px var(--gd-yellow), 0 0 10px var(--gd-yellow); }
+    50% { box-shadow: 0 0 20px var(--gd-yellow), 0 0 40px var(--gd-yellow); }
+}
+
+@keyframes mechaFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* Apply mecha animations */
+.project-badge {
+    animation: mechaFlicker 2s ease-in-out infinite;
+}
+
+.label-dot {
+    animation: mechaGlow 1.5s ease-in-out infinite;
+}
