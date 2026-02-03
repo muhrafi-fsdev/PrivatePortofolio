@@ -2,36 +2,36 @@
    LANDING PAGE JAVASCRIPT
    ============================================ */
 
-// Check if user has already visited
-const hasVisited = sessionStorage.getItem('portfolioVisited');
-
 // Elements
 const landingPage = document.getElementById('landingPage');
 const portfolioMain = document.getElementById('portfolioMain');
 
+// Check if user has already visited
+const hasVisited = sessionStorage.getItem('portfolioVisited');
+
 // If already visited in this session, skip landing
-if (hasVisited) {
+if (hasVisited && landingPage && portfolioMain) {
     landingPage.classList.add('hidden');
     portfolioMain.classList.add('visible');
 }
 
 // Enter portfolio function
 function enterPortfolio() {
+    if (!landingPage || !portfolioMain) return;
+    
     // Mark as visited
     sessionStorage.setItem('portfolioVisited', 'true');
     
     // Hide landing page
     landingPage.classList.add('hidden');
     
-    // Show portfolio with delay
-    setTimeout(() => {
-        portfolioMain.classList.add('visible');
-    }, 300);
+    // Show portfolio immediately
+    portfolioMain.classList.add('visible');
     
     // Smooth scroll to top of portfolio
     setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500);
+    }, 100);
 }
 
 // Allow scroll to bypass landing page
@@ -39,7 +39,7 @@ let scrollThreshold = 100;
 let scrolled = 0;
 
 window.addEventListener('wheel', (e) => {
-    if (!landingPage.classList.contains('hidden')) {
+    if (landingPage && !landingPage.classList.contains('hidden')) {
         scrolled += Math.abs(e.deltaY);
         if (scrolled > scrollThreshold) {
             enterPortfolio();
@@ -55,7 +55,7 @@ window.addEventListener('touchstart', (e) => {
 });
 
 window.addEventListener('touchmove', (e) => {
-    if (!landingPage.classList.contains('hidden')) {
+    if (landingPage && !landingPage.classList.contains('hidden')) {
         const touchDiff = touchStartY - e.touches[0].clientY;
         if (touchDiff > 50) {
             enterPortfolio();
@@ -65,7 +65,7 @@ window.addEventListener('touchmove', (e) => {
 
 // Keyboard support
 window.addEventListener('keydown', (e) => {
-    if (!landingPage.classList.contains('hidden')) {
+    if (landingPage && !landingPage.classList.contains('hidden')) {
         if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
             e.preventDefault();
             enterPortfolio();
@@ -74,11 +74,10 @@ window.addEventListener('keydown', (e) => {
 });
 
 // Add click anywhere to enter (except button which has its own handler)
-landingPage.addEventListener('click', (e) => {
-    if (e.target === landingPage || e.target.closest('.landing-content') && !e.target.closest('.landing-cta')) {
-        // Don't trigger on the button
+if (landingPage) {
+    landingPage.addEventListener('click', (e) => {
         if (!e.target.closest('.landing-cta')) {
             enterPortfolio();
         }
-    }
-});
+    });
+}
