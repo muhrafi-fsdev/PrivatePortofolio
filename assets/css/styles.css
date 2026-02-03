@@ -1,35 +1,50 @@
 /* ============================================
    PORTFOLIO - Muhammad Rafi Priyo Sembodo
-   Modern Split Hero Design
+   Gundam-Inspired Professional Design
    ============================================ */
 
-/* CSS Variables */
+/* CSS Variables - Gundam Theme */
 :root {
-    /* Primary Colors - Deep Teal & Coral Orange */
-    --primary-purple: #0D9488;
-    --primary-purple-dark: #0F766E;
-    --primary-lime: #F97316;
-    --primary-lime-dark: #EA580C;
+    /* Primary Colors - Gundam Theme */
+    --gundam-white: #FFFFFF;
+    --gundam-blue: #1E3A5F;
+    --gundam-blue-dark: #152842;
+    --gundam-blue-light: #2E5A8F;
+    --gundam-red: #E63946;
+    --gundam-red-dark: #C1121F;
+    --gundam-yellow: #FFD60A;
+    --gundam-yellow-dark: #FFC300;
+    --gundam-gold: #D4AF37;
+    --gundam-gray: #4A5568;
+    --gundam-dark: #1A202C;
+    
+    /* Accent mappings */
+    --primary-purple: #1E3A5F;
+    --primary-purple-dark: #152842;
+    --primary-lime: #FFD60A;
+    --primary-lime-dark: #FFC300;
+    --accent-red: #E63946;
+    --accent-blue: #2E5A8F;
     
     /* Neutral Colors */
     --white: #FFFFFF;
-    --gray-50: #F9FAFB;
-    --gray-100: #F3F4F6;
-    --gray-200: #E5E7EB;
-    --gray-300: #D1D5DB;
-    --gray-400: #9CA3AF;
-    --gray-500: #6B7280;
-    --gray-600: #4B5563;
-    --gray-700: #374151;
-    --gray-800: #1F2937;
-    --gray-900: #111827;
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-300: #CBD5E1;
+    --gray-400: #94A3B8;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1E293B;
+    --gray-900: #0F172A;
     --black: #000000;
     
     /* Semantic Colors */
     --success: #10B981;
-    --warning: #F59E0B;
-    --danger: #EF4444;
-    --info: #3B82F6;
+    --warning: #FFD60A;
+    --danger: #E63946;
+    --info: #2E5A8F;
     
     /* Typography */
     --font-display: 'Outfit', sans-serif;
@@ -44,11 +59,12 @@
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    /* Shadows - Enhanced */
+    --shadow-sm: 0 1px 2px rgba(30, 58, 95, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(30, 58, 95, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(30, 58, 95, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(30, 58, 95, 0.15);
+    --shadow-gundam: 0 10px 40px rgba(30, 58, 95, 0.2);
     
     /* Border Radius */
     --radius-sm: 4px;
