@@ -261,6 +261,55 @@
     color: var(--gd-blue-dark) !important;
 }
 
+/* CV Download Button */
+.hero-cta .btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 3px solid var(--gd-white) !important;
+    color: var(--gd-white) !important;
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-cta .btn-cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 214, 0, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.hero-cta .btn-cv:hover::before {
+    left: 100%;
+}
+
+.hero-cta .btn-cv:hover {
+    background: var(--gd-white) !important;
+    color: var(--gd-blue-dark) !important;
+    border-color: var(--gd-white) !important;
+}
+
+.hero-cta .btn-cv svg {
+    transition: transform 0.3s ease;
+}
+
+.hero-cta .btn-cv:hover svg {
+    transform: translateY(3px);
+    animation: downloadBounce 0.6s ease infinite;
+}
+
+@keyframes downloadBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
 /* Hero Image Frame - Mecha Panel */
 .image-frame {
     position: relative;
