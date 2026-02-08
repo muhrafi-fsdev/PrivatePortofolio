@@ -947,40 +947,94 @@
 
 .contact-intro {
     color: var(--gd-gray) !important;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
 }
 
-/* Contact Links - Mecha Panels */
-.contact-link {
-    background: var(--gd-white) !important;
-    border: 2px solid var(--gd-blue) !important;
-    border-radius: 0 !important;
-    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+/* Contact Icons - Icon Only Layout */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.contact-link:hover {
-    border-color: var(--gd-red) !important;
-    transform: translateY(-5px);
-    box-shadow: 6px 6px 0 rgba(26, 35, 126, 0.1);
+.contact-icon-link:hover {
+    transform: translateY(-10px);
 }
 
-.contact-icon {
-    background: var(--gd-gradient-blue) !important;
-    color: var(--gd-yellow) !important;
-    border-radius: 0 !important;
-    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gd-gradient-blue);
+    color: var(--gd-yellow);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.contact-label {
-    color: var(--gd-gray-light) !important;
+.icon-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: transparent;
+    border: 2px solid var(--gd-blue);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.3s ease;
+}
+
+.contact-icon-link:hover .icon-wrapper {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.contact-icon-link:hover .icon-wrapper::before {
+    border-color: var(--gd-yellow);
+}
+
+/* Individual icon colors on hover */
+.contact-icon-link:hover .icon-wrapper.email {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+.contact-icon-link:hover .icon-wrapper.github {
+    background: linear-gradient(135deg, #333, #24292e);
+    color: #fff;
+}
+
+.contact-icon-link:hover .icon-wrapper.linkedin {
+    background: linear-gradient(135deg, #0077b5, #00669c);
+    color: #fff;
+}
+
+.contact-icon-link:hover .icon-wrapper.instagram {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: #fff;
+}
+
+.icon-label {
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.7rem;
+    color: var(--gd-gray);
+    transition: color 0.3s ease;
 }
 
-.contact-value {
-    color: var(--gd-blue-dark) !important;
-    font-weight: 600;
+.contact-icon-link:hover .icon-label {
+    color: var(--gd-blue-dark);
 }
 
 /* ============================================
@@ -1734,7 +1788,7 @@
 /* Social Grid */
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
@@ -1743,11 +1797,11 @@
 .social-card {
     background: rgba(255, 255, 255, 0.08);
     border: 2px solid rgba(255, 255, 255, 0.15);
-    padding: 30px;
     position: relative;
     backdrop-filter: blur(10px);
     clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px));
     transition: all 0.4s ease;
+    overflow: hidden;
 }
 
 .social-card::before {
@@ -1758,6 +1812,7 @@
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--gd-red), var(--gd-yellow));
+    z-index: 10;
 }
 
 .social-card::after {
@@ -1770,6 +1825,7 @@
     background: rgba(255, 214, 0, 0.2);
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
     transition: all 0.3s ease;
+    z-index: 10;
 }
 
 .social-card:hover {
@@ -1783,6 +1839,41 @@
     width: 60px;
     height: 60px;
     background: rgba(255, 214, 0, 0.4);
+}
+
+/* Social Image */
+.social-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.social-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.social-card:hover .social-image img {
+    transform: scale(1.1);
+}
+
+.social-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(26, 35, 126, 0.9), transparent);
+    pointer-events: none;
+}
+
+/* Social Content */
+.social-content {
+    padding: 25px;
 }
 
 /* Featured Card */
@@ -1799,8 +1890,8 @@
 /* Social Badge */
 .social-badge {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     padding: 5px 15px;
     background: var(--gd-red);
     color: var(--gd-white);
@@ -1809,10 +1900,12 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    z-index: 20;
 }
 
-/* Social Icon */
+/* Social Icon - removed, using images instead */
 .social-icon {
+    display: none;
     width: 80px;
     height: 80px;
     margin-bottom: 20px;
