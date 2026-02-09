@@ -540,46 +540,77 @@
     max-width: 650px;
 }
 
-/* Logo - Gundam Style */
+/* Logo - Gundam Hexagon Style */
 .landing-logo {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 127px;
     margin: 0 auto 35px;
-    background: linear-gradient(135deg, #ffd600 0%, #ffab00 100%);
+    background: linear-gradient(180deg, #ffd600 0%, #ffab00 50%, #ff8f00 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     animation: logoFloat 4s ease-in-out infinite;
     box-shadow:
-        0 0 0 4px #d32f2f,
-        0 0 0 8px rgba(255, 214, 0, 0.3),
-        0 20px 60px rgba(255, 214, 0, 0.3);
+        0 0 30px rgba(255, 214, 0, 0.5),
+        0 0 60px rgba(211, 47, 47, 0.3);
     position: relative;
-    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
+/* Outer Ring - Mecha Frame */
 .landing-logo::before {
     content: '';
     position: absolute;
-    inset: -12px;
-    border: 2px solid rgba(255, 214, 0, 0.4);
-    clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
-    animation: logoPulse 2s ease-in-out infinite;
+    inset: -8px;
+    background: linear-gradient(180deg, #d32f2f 0%, #b71c1c 100%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+    animation: mechaRingPulse 2s ease-in-out infinite;
+}
+
+/* Second Ring - Glow Effect */
+.landing-logo::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border: 2px solid rgba(255, 214, 0, 0.5);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: mechaOuterPulse 2s ease-in-out infinite 0.5s;
 }
 
 @keyframes logoFloat {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-8px) rotate(1deg);
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-12px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-8px) rotate(-1deg);
     }
 }
 
-@keyframes logoPulse {
+@keyframes mechaRingPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(211, 47, 47, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(211, 47, 47, 0.8), 0 0 60px rgba(255, 214, 0, 0.4);
+    }
+}
+
+@keyframes mechaOuterPulse {
 
     0%,
     100% {
@@ -588,17 +619,21 @@
     }
 
     50% {
-        transform: scale(1.05);
+        transform: scale(1.08);
         opacity: 0;
     }
 }
 
 .logo-letter {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 900;
     color: #1a237e;
     font-family: 'Outfit', sans-serif;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+    text-shadow:
+        2px 2px 0 rgba(255, 255, 255, 0.7),
+        -1px -1px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 /* Title */
@@ -676,60 +711,92 @@
 .landing-stat {
     text-align: center;
     position: relative;
-    padding: 15px 25px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 214, 0, 0.3);
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    padding: 18px 28px;
+    background: linear-gradient(180deg, rgba(26, 35, 126, 0.6) 0%, rgba(13, 20, 33, 0.8) 100%);
+    border: 2px solid rgba(255, 214, 0, 0.4);
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Top accent line */
+.landing-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffd600, transparent);
+    opacity: 0.8;
+}
+
+/* Corner decoration */
+.landing-stat::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, transparent 50%, rgba(211, 47, 47, 0.5) 50%);
     transition: all 0.3s ease;
 }
 
 .landing-stat:hover {
     border-color: #ffd600;
-    background: rgba(255, 214, 0, 0.1);
-    transform: translateY(-5px);
+    background: linear-gradient(180deg, rgba(26, 35, 126, 0.8) 0%, rgba(13, 20, 33, 0.9) 100%);
+    transform: translateY(-8px);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 214, 0, 0.2);
 }
 
-.landing-stat::after {
-    display: none;
+.landing-stat:hover::after {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, transparent 50%, rgba(255, 214, 0, 0.6) 50%);
 }
 
 .stat-num {
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 900;
     color: #ffd600;
     line-height: 1.2;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-family: 'JetBrains Mono', monospace;
-    text-shadow: 2px 2px 0 rgba(211, 47, 47, 0.5);
+    text-shadow:
+        0 0 10px rgba(255, 214, 0, 0.5),
+        2px 2px 0 rgba(211, 47, 47, 0.5);
 }
 
 .stat-text {
     font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-/* CTA Button - Mecha Style */
+/* CTA Button - Gundam Mecha Style */
 .landing-cta {
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    padding: 18px 50px;
-    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+    padding: 20px 55px;
+    background: linear-gradient(180deg, #d32f2f 0%, #b71c1c 50%, #8b0000 100%);
     color: white;
     border: none;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+    letter-spacing: 3px;
+    clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0 50%);
     box-shadow:
         0 0 0 3px #ffd600,
-        6px 6px 0 rgba(0, 0, 0, 0.3);
+        0 8px 25px rgba(211, 47, 47, 0.5);
     transition: all 0.3s ease;
     font-family: 'Outfit', sans-serif;
     animation: fadeSlideUp 0.8s ease forwards;
@@ -739,34 +806,49 @@
     overflow: hidden;
 }
 
+/* Top accent */
 .landing-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffd600, transparent);
+}
+
+/* Shine effect */
+.landing-cta::after {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.6s ease;
 }
 
-.landing-cta:hover::before {
+.landing-cta:hover::after {
     left: 100%;
 }
 
 .landing-cta:hover {
-    transform: translate(-3px, -3px);
+    transform: translateY(-5px);
     box-shadow:
         0 0 0 3px #ffd600,
-        9px 9px 0 rgba(0, 0, 0, 0.4);
+        0 15px 35px rgba(211, 47, 47, 0.6),
+        0 0 30px rgba(255, 214, 0, 0.3);
+    background: linear-gradient(180deg, #e53935 0%, #d32f2f 50%, #b71c1c 100%);
 }
 
 .landing-cta svg {
     transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
 }
 
 .landing-cta:hover svg {
-    transform: translateX(5px);
+    transform: translateX(8px);
 }
 
 /* Scroll Hint */
