@@ -1302,14 +1302,16 @@
 .institution-logo {
     width: 60px;
     height: 60px;
-    background: var(--gd-gradient-blue);
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid var(--gd-blue);
     flex-shrink: 0;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .institution-logo img {
