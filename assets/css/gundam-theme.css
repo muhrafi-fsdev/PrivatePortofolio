@@ -1298,6 +1298,28 @@
     flex-shrink: 0;
 }
 
+/* Institution Logo - Image Based */
+.institution-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--gd-gradient-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.institution-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
 .institution-info {
     flex: 1;
 }
