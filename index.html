@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Rafi Priyo | Frontend Developer</title>
-    <meta name="description" content="Portfolio Muhammad Rafi Priyo - Frontend Developer yang fokus membangun interface yang solid, scalable, dan berfokus pada pengalaman pengguna.">
+    <meta name="description"
+        content="Portfolio Muhammad Rafi Priyo - Frontend Developer yang fokus membangun interface yang solid, scalable, dan berfokus pada pengalaman pengguna.">
     <meta name="keywords" content="Frontend Developer, Web Developer, React, JavaScript, Portfolio">
     <meta name="author" content="Muhammad Rafi Priyo">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Muhammad Rafi Priyo | Frontend Developer">
     <meta property="og:description" content="Frontend Developer yang fokus membangun interface yang solid dan scalable">
     <meta property="og:type" content="website">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
@@ -20,32 +22,37 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0D9488">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- Chart.js for TITAN demo -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/landing.css">
     <link rel="stylesheet" href="assets/css/gundam-theme.css">
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <div class="loading-code">
                 <div class="code-line">
-                    <span class="code-keyword">const</span> <span class="code-var">portfolio</span> = <span class="code-keyword">new</span> <span class="code-class">Developer</span>();
+                    <span class="code-keyword">const</span> <span class="code-var">portfolio</span> = <span
+                        class="code-keyword">new</span> <span class="code-class">Developer</span>();
                 </div>
                 <div class="code-line">
                     <span class="code-var">portfolio</span>.<span class="code-method">initialize</span>();
                 </div>
                 <div class="code-line typing">
-                    <span class="code-var">portfolio</span>.<span class="code-method">load</span>(<span class="code-string">'components'</span>);
+                    <span class="code-var">portfolio</span>.<span class="code-method">load</span>(<span
+                        class="code-string">'components'</span>);
                 </div>
             </div>
             <div class="loading-progress">
@@ -61,19 +68,19 @@
             <div class="landing-particles"></div>
             <div class="landing-gradient"></div>
         </div>
-        
+
         <div class="landing-content">
             <div class="landing-logo">
                 <span class="logo-letter">R</span>
             </div>
-            
+
             <h1 class="landing-title">
                 <span class="title-greeting">Selamat Datang di Portfolio</span>
                 <span class="title-name">Muhammad Rafi Priyo</span>
             </h1>
-            
+
             <p class="landing-subtitle">Frontend Developer & Mahasiswa Teknik Telekomunikasi</p>
-            
+
             <div class="landing-stats">
                 <div class="landing-stat">
                     <span class="stat-num">&lt;/&gt;</span>
@@ -88,11 +95,11 @@
                     <span class="stat-text">Tech Stack</span>
                 </div>
             </div>
-            
+
             <button class="landing-cta" onclick="enterPortfolio()">
                 <span>Masuk ke Portfolio</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
             </button>
         </div>
@@ -100,920 +107,998 @@
 
     <!-- Main Portfolio (Hidden initially) -->
     <div class="portfolio-main" id="portfolioMain">
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>
-                <span class="logo-text">RafiPriyo</span>
-                <span class="logo-bracket">/&gt;</span>
-            </a>
-            <div class="nav-menu" id="navMenu">
-                <a href="#about" class="nav-link">Tentang</a>
-                <a href="#projects" class="nav-link">Proyek</a>
-                <a href="#skills" class="nav-link">Keahlian</a>
-                <a href="#education" class="nav-link">Pendidikan</a>
-                <a href="#contact" class="nav-link nav-link-cta">Hubungi Saya</a>
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">RafiPriyo</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#about" class="nav-link">Tentang</a>
+                    <a href="#projects" class="nav-link">Proyek</a>
+                    <a href="#skills" class="nav-link">Keahlian</a>
+                    <a href="#education" class="nav-link">Pendidikan</a>
+                    <a href="#contact" class="nav-link nav-link-cta">Hubungi Saya</a>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-bg-left"></div>
-            <div class="hero-bg-right"></div>
-        </div>
-        
-        <div class="hero-decorations">
-            <div class="deco-dots deco-dots-1"></div>
-            <div class="deco-dots deco-dots-2"></div>
-            <div class="deco-zigzag deco-zigzag-1"></div>
-            <div class="deco-zigzag deco-zigzag-2"></div>
-            <div class="deco-square deco-square-1"></div>
-            <div class="deco-diamond deco-diamond-1"></div>
-            <div class="deco-diamond deco-diamond-2"></div>
-            <div class="deco-line deco-line-1"></div>
-        </div>
-        
-        <div class="hero-container">
-            <div class="hero-content">
-                <p class="hero-greeting">Halo, saya</p>
-                <h1 class="hero-title">
-                    Frontend<br>
-                    <span class="hero-title-accent">Developer.</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Saya suka membangun frontend yang solid, scalable, dan berfokus pada pengalaman pengguna.
-                </p>
-                <div class="hero-highlights">
-                    <div class="highlight-item">
-                        <span class="highlight-bullet"></span>
-                        <span>Fokus pada performance, responsive design, dan reusable components.</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-bullet"></span>
-                        <span>Terbiasa berkolaborasi dengan tim product dan design.</span>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-bullet"></span>
-                        <span>Passionate dalam menciptakan pengalaman digital yang bermakna.</span>
-                    </div>
-                </div>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>Lihat Proyek</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                    </a>
-                    <a href="assets/CV_Muhammad_Rafi_Priyo_Sembodo.pdf" download class="btn btn-outline btn-cv">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
-                        </svg>
-                        <span>Download CV</span>
-                    </a>
-                </div>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <div class="hero-bg-left"></div>
+                <div class="hero-bg-right"></div>
             </div>
-            
-            <div class="hero-image">
-                <div class="image-frame">
-                    <div class="image-frame-border"></div>
-                    <div class="image-wrapper">
-                        <img src="assets/img/profile.webp" alt="Muhammad Rafi Priyo" class="profile-img">
-                    </div>
-                    <div class="image-label">
-                        <span class="label-dot"></span>
-                        <span>Available for work</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-scroll">
-            <span>Scroll</span>
-            <div class="scroll-indicator"></div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">01</span>
-                <h2 class="section-title">Tentang Saya</h2>
+            <div class="hero-decorations">
+                <div class="deco-dots deco-dots-1"></div>
+                <div class="deco-dots deco-dots-2"></div>
+                <div class="deco-zigzag deco-zigzag-1"></div>
+                <div class="deco-zigzag deco-zigzag-2"></div>
+                <div class="deco-square deco-square-1"></div>
+                <div class="deco-diamond deco-diamond-1"></div>
+                <div class="deco-diamond deco-diamond-2"></div>
+                <div class="deco-line deco-line-1"></div>
             </div>
-            
-            <div class="about-content fade-in">
-                <div class="about-text">
-                    <p class="about-intro">
-                        <span class="text-highlight">Muhammad Rafi Priyo</span> adalah seorang frontend developer dan mahasiswa Teknik Telekomunikasi di Telkom University Jakarta yang memiliki passion dalam membangun interface yang cepat, intuitif, dan mudah digunakan.
-                    </p>
-                    <p>
-                        Dengan pengalaman dalam berbagai proyek web development, saya menguasai stack teknologi modern termasuk <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, serta framework seperti <strong>React</strong>, <strong>Next.js</strong>, dan <strong>Tailwind CSS</strong>. Saya juga familiar dengan backend development menggunakan <strong>PHP</strong> dan database <strong>MySQL</strong>.
-                    </p>
-                    <p>
-                        Saya percaya bahwa kode yang baik bukan hanya yang berfungsi, tetapi juga yang bersih, maintainable, dan memberikan pengalaman pengguna yang optimal. Setiap proyek adalah kesempatan untuk belajar dan menciptakan sesuatu yang bermakna.
-                    </p>
-                </div>
-                
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">4+</span>
-                        <span class="stat-label">Proyek Utama</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Teknologi</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Bahasa Pemrograman</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">02</span>
-                <h2 class="section-title">Project Showcase</h2>
-                <p class="section-subtitle">Koleksi project terbaru yang telah saya kembangkan. Klik untuk melihat demo langsung!</p>
-            </div>
-            
-            <div class="projects-grid fade-in">
-                <!-- SAVIA Project -->
-                <div class="project-card" data-project="savia">
-                    <div class="project-badge">IoT System</div>
-                    <div class="project-image">
-                        <img src="assets/img/project-savia.png" alt="SAVIA Project">
-                        <div class="project-overlay">
-                            <span>Smart Aqua Village for Integrated Access</span>
-                        </div>
-                    </div>
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="project-title">SAVIA</h3>
-                    </div>
-                    <p class="project-description">
-                        Sistem monitoring kualitas air desa berbasis IoT. Pantau TDS, pH, dan level toren secara real-time dengan notifikasi Telegram otomatis.
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting">Halo, saya</p>
+                    <h1 class="hero-title">
+                        Frontend<br>
+                        <span class="hero-title-accent">Developer.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Saya suka membangun frontend yang solid, scalable, dan berfokus pada pengalaman pengguna.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">IoT</span>
-                        <span class="tech-tag">Telegram Bot</span>
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-bullet"></span>
+                            <span>Fokus pada performance, responsive design, dan reusable components.</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-bullet"></span>
+                            <span>Terbiasa berkolaborasi dengan tim product dan design.</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-bullet"></span>
+                            <span>Passionate dalam menciptakan pengalaman digital yang bermakna.</span>
+                        </div>
                     </div>
-                    <div class="project-actions">
-                        <a href="https://savia.my.id" target="_blank" class="btn btn-primary btn-sm">
-                            <span>Live Demo</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                <polyline points="15 3 21 3 21 9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Lihat Proyek</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
+                        </a>
+                        <a href="assets/CV_Muhammad_Rafi_Priyo_Sembodo.pdf" download class="btn btn-outline btn-cv">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            <span>Download CV</span>
                         </a>
                     </div>
                 </div>
-                
-                <!-- Academic Organizer Project -->
-                <div class="project-card" data-project="academic">
-                    <div class="project-badge">Web App</div>
-                    <div class="project-image">
-                        <img src="assets/img/project-academic.png" alt="Academic Organizer Project">
-                        <div class="project-overlay">
-                            <span>Kelola Tugas & Eksperimen Akademik</span>
-                        </div>
-                    </div>
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="project-title">Academic Organizer</h3>
-                    </div>
-                    <p class="project-description">
-                        Aplikasi manajemen tugas akademik dengan AI Assistant. Fitur tracking deadline, log eksperimen, dan statistik progress akademik.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">LocalStorage</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://muhrafi-fsdev.github.io/AcademicOrganizer/" target="_blank" class="btn btn-primary btn-sm">
-                            <span>Live Demo</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                <polyline points="15 3 21 3 21 9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/muhrafi-fsdev/AcademicOrganizer" target="_blank" class="btn btn-outline btn-sm">
-                            <span>GitHub</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- RAYSTORE Project -->
-                <div class="project-card" data-project="raystore">
-                    <div class="project-badge">E-Commerce</div>
-                    <div class="project-image">
-                        <img src="assets/img/project-raystore.png" alt="RAYSTORE Project">
-                        <div class="project-overlay">
-                            <span>Top Up Game Murah & Cepat</span>
-                        </div>
-                    </div>
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                                <line x1="3" y1="6" x2="21" y2="6"/>
-                                <path d="M16 10a4 4 0 0 1-8 0"/>
-                            </svg>
-                        </div>
-                        <h3 class="project-title">RAYSTORE</h3>
-                    </div>
-                    <p class="project-description">
-                        Platform top up game termurah se-Indonesia. Tersedia Mobile Legends, PUBG, FF, Steam Wallet, dan Aplikasi Premium dengan membership system.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Firebase</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://muhrafi-fsdev.github.io/Raystore-topup/" target="_blank" class="btn btn-primary btn-sm">
-                            <span>Live Demo</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1-2-2h6"/>
-                                <polyline points="15 3 21 3 21 9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/muhrafi-fsdev/Raystore-topup" target="_blank" class="btn btn-outline btn-sm">
-                            <span>GitHub</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Cuaca Nusantara Project -->
-                <div class="project-card" data-project="cuaca">
-                    <div class="project-badge">Weather App</div>
-                    <div class="project-image">
-                        <img src="assets/img/project-cuaca.png" alt="Cuaca Nusantara Project">
-                        <div class="project-overlay">
-                            <span>Prakiraan Cuaca Indonesia</span>
-                        </div>
-                    </div>
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
-                            </svg>
-                        </div>
-                        <h3 class="project-title">Cuaca Nusantara</h3>
-                    </div>
-                    <p class="project-description">
-                        Aplikasi prakiraan cuaca Indonesia dengan informasi cuaca real-time, monitoring gempa bumi, kondisi maritim, dan peringatan dini BMKG.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">BMKG API</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://muhrafi-fsdev.github.io/WeathWebs/" target="_blank" class="btn btn-primary btn-sm">
-                            <span>Live Demo</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1-2-2h6"/>
-                                <polyline points="15 3 21 3 21 9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/muhrafi-fsdev/WeathWebs" target="_blank" class="btn btn-outline btn-sm">
-                            <span>GitHub</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">03</span>
-                <h2 class="section-title">Keahlian</h2>
-            </div>
-            
-            <div class="skills-grid fade-in">
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"/>
-                            <polyline points="8 6 2 12 8 18"/>
-                        </svg>
-                        Frontend
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-level="advanced">HTML5</span>
-                        <span class="skill-tag" data-level="advanced">CSS3</span>
-                        <span class="skill-tag" data-level="advanced">JavaScript</span>
-                        <span class="skill-tag" data-level="intermediate">React</span>
-                        <span class="skill-tag" data-level="intermediate">Next.js</span>
-                        <span class="skill-tag" data-level="advanced">Tailwind CSS</span>
-                        <span class="skill-tag" data-level="intermediate">Bootstrap</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                        </svg>
-                        Backend & Database
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-level="advanced">PHP</span>
-                        <span class="skill-tag" data-level="advanced">MySQL</span>
-                        <span class="skill-tag" data-level="intermediate">REST API</span>
-                        <span class="skill-tag" data-level="beginner">Node.js</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                        </svg>
-                        Tools
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-level="advanced">Git</span>
-                        <span class="skill-tag" data-level="advanced">GitHub</span>
-                        <span class="skill-tag" data-level="intermediate">VS Code</span>
-                        <span class="skill-tag" data-level="intermediate">Figma</span>
-                        <span class="skill-tag" data-level="intermediate">Postman</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                        </svg>
-                        Workflow
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-level="intermediate">Agile</span>
-                        <span class="skill-tag" data-level="advanced">Team Collaboration</span>
-                        <span class="skill-tag" data-level="intermediate">Problem Solving</span>
-                        <span class="skill-tag" data-level="intermediate">Clean Code</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="education" id="education">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">04</span>
-                <h2 class="section-title">Pendidikan</h2>
-            </div>
-            
-            <div class="education-timeline fade-in">
-                <!-- Telkom University -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">
-                            <span class="date-badge">2023 - Sekarang</span>
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <div class="image-frame-border"></div>
+                        <div class="image-wrapper">
+                            <img src="assets/img/profile.webp" alt="Muhammad Rafi Priyo" class="profile-img">
                         </div>
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <div class="institution-logo">
-                                    <img src="assets/img/logo-telkom.png" alt="Telkom University">
-                                </div>
-                                <div class="institution-info">
-                                    <h3 class="institution-name">TELKOM UNIVERSITY JAKARTA</h3>
-                                    <span class="institution-type">Perguruan Tinggi</span>
-                                </div>
+                        <div class="image-label">
+                            <span class="label-dot"></span>
+                            <span>Available for work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-indicator"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">01</span>
+                    <h2 class="section-title">Tentang Saya</h2>
+                </div>
+
+                <div class="about-content fade-in">
+                    <div class="about-text">
+                        <p class="about-intro">
+                            <span class="text-highlight">Muhammad Rafi Priyo</span> adalah seorang frontend developer
+                            dan mahasiswa Teknik Telekomunikasi di Telkom University Jakarta yang memiliki passion dalam
+                            membangun interface yang cepat, intuitif, dan mudah digunakan.
+                        </p>
+                        <p>
+                            Dengan pengalaman dalam berbagai proyek web development, saya menguasai stack teknologi
+                            modern termasuk <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>,
+                            serta framework seperti <strong>React</strong>, <strong>Next.js</strong>, dan
+                            <strong>Tailwind CSS</strong>. Saya juga familiar dengan backend development menggunakan
+                            <strong>PHP</strong> dan database <strong>MySQL</strong>.
+                        </p>
+                        <p>
+                            Saya percaya bahwa kode yang baik bukan hanya yang berfungsi, tetapi juga yang bersih,
+                            maintainable, dan memberikan pengalaman pengguna yang optimal. Setiap proyek adalah
+                            kesempatan untuk belajar dan menciptakan sesuatu yang bermakna.
+                        </p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Proyek Utama</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Teknologi</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Bahasa Pemrograman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">02</span>
+                    <h2 class="section-title">Project Showcase</h2>
+                    <p class="section-subtitle">Koleksi project terbaru yang telah saya kembangkan. Klik untuk melihat
+                        demo langsung!</p>
+                </div>
+
+                <div class="projects-grid fade-in">
+                    <!-- SAVIA Project -->
+                    <div class="project-card" data-project="savia">
+                        <div class="project-badge">IoT System</div>
+                        <div class="project-image">
+                            <img src="assets/img/project-savia.png" alt="SAVIA Project">
+                            <div class="project-overlay">
+                                <span>Smart Aqua Village for Integrated Access</span>
                             </div>
-                            <ul class="timeline-details">
-                                <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="9 11 12 14 22 4"/>
-                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                                    </svg>
-                                    Telecommunication Engineering
-                                </li>
-                                <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                                    </svg>
-                                    GPA: 3.58/4.00 (Semester 5)
-                                </li>
-                            </ul>
                         </div>
-                    </div>
-                </div>
-
-                <!-- SMAN 44 Jakarta -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">
-                            <span class="date-badge">2020 - 2023</span>
-                        </div>
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <div class="institution-logo">
-                                    <img src="assets/img/logo-sman44.png" alt="SMAN 44 Jakarta">
-                                </div>
-                                <div class="institution-info">
-                                    <h3 class="institution-name">SMAN 44 JAKARTA</h3>
-                                    <span class="institution-type">Sekolah Menengah Atas</span>
-                                </div>
-                            </div>
-                            <ul class="timeline-details">
-                                <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="9 11 12 14 22 4"/>
-                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                                    </svg>
-                                    Science Major
-                                </li>
-                                <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                                    </svg>
-                                    Graduation Score: 92
-                                </li>
-                                <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                                        <path d="M4 22h16"/>
-                                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-                                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
-                                    </svg>
-                                    Top 10 Best Value Graduates 2023
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section class="certificates" id="certificates">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">05</span>
-                <h2 class="section-title">Sertifikat</h2>
-            </div>
-            
-            <div class="certificates-grid fade-in">
-                <!-- Certificate 1 - AI Course -->
-                <div class="certificate-card">
-                    <div class="cert-ribbon">
-                        <span>Terbaru</span>
-                    </div>
-                    <div class="cert-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/>
-                            <circle cx="12" cy="14" r="2"/>
-                            <path d="M12 16v2"/>
-                        </svg>
-                    </div>
-                    <div class="cert-date">Des 2025</div>
-                    <h3 class="cert-title">Artificial Intelligence Course</h3>
-                    <p class="cert-issuer">Microsoft Learn</p>
-                    <div class="cert-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                        Verified
-                    </div>
-                </div>
-
-                <!-- Certificate 2 - IoT Workshop -->
-                <div class="certificate-card">
-                    <div class="cert-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                        </svg>
-                    </div>
-                    <div class="cert-date">Jun 2024</div>
-                    <h3 class="cert-title">Workshop Analog Digital Sensor and Actuator with IOT</h3>
-                    <p class="cert-issuer">Telkom University Jakarta</p>
-                    <div class="cert-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                        Verified
-                    </div>
-                </div>
-
-                <!-- Certificate 3 - Cisco -->
-                <div class="certificate-card">
-                    <div class="cert-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <line x1="2" y1="12" x2="22" y2="12"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
-                    </div>
-                    <div class="cert-date">Jun 2025</div>
-                    <h3 class="cert-title">Introduction to Networks</h3>
-                    <p class="cert-issuer">Cisco Networking Academy</p>
-                    <div class="cert-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                        Verified
-                    </div>
-                </div>
-
-                <!-- Certificate 4 - Basic Programming -->
-                <div class="certificate-card">
-                    <div class="cert-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"/>
-                            <polyline points="8 6 2 12 8 18"/>
-                        </svg>
-                    </div>
-                    <div class="cert-date">Apr 2023</div>
-                    <h3 class="cert-title">Basic Programming Course</h3>
-                    <p class="cert-issuer">Binus University Bekasi</p>
-                    <div class="cert-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                        Verified
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">06</span>
-                <h2 class="section-title">Pengalaman</h2>
-            </div>
-            
-            <div class="experience-timeline fade-in">
-                <!-- Experience 1 -->
-                <div class="exp-item">
-                    <div class="exp-marker">
-                        <div class="exp-dot"></div>
-                        <div class="exp-line"></div>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <div class="exp-title-wrap">
-                                <h3 class="exp-title">Studium General Agama Islam</h3>
-                                <span class="exp-company">Telkom University Jakarta</span>
-                            </div>
-                            <span class="exp-date">Nov 2025</span>
-                        </div>
-                        <div class="exp-card">
-                            <div class="exp-role">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
                                 </svg>
-                                Penanggung Jawab Tempat Pelaksana
                             </div>
-                            <p class="exp-desc">Program Studi Sistem Informasi dan Desain Komunikasi Visual Angkatan 2025</p>
+                            <h3 class="project-title">SAVIA</h3>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="exp-item">
-                    <div class="exp-marker">
-                        <div class="exp-dot"></div>
-                        <div class="exp-line"></div>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <div class="exp-title-wrap">
-                                <h3 class="exp-title">Studium General Agama Islam</h3>
-                                <span class="exp-company">Telkom University Jakarta</span>
-                            </div>
-                            <span class="exp-date">Mei 2025</span>
+                        <p class="project-description">
+                            Sistem monitoring kualitas air desa berbasis IoT. Pantau TDS, pH, dan level toren secara
+                            real-time dengan notifikasi Telegram otomatis.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Telegram Bot</span>
                         </div>
-                        <div class="exp-card">
-                            <div class="exp-role">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        <div class="project-actions">
+                            <a href="https://savia.my.id" target="_blank" class="btn btn-primary btn-sm">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
                                 </svg>
-                                Penanggung Jawab Tempat Pelaksana
-                            </div>
-                            <p class="exp-desc">Program Studi Teknik Telekomunikasi Angkatan 2024</p>
+                            </a>
                         </div>
                     </div>
-                </div>
 
-                <!-- Experience 3 -->
-                <div class="exp-item">
-                    <div class="exp-marker">
-                        <div class="exp-dot"></div>
-                    </div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <div class="exp-title-wrap">
-                                <h3 class="exp-title">Kepanitiaan PKKMB</h3>
-                                <span class="exp-company">Telkom University Jakarta 2024</span>
+                    <!-- Academic Organizer Project -->
+                    <div class="project-card" data-project="academic">
+                        <div class="project-badge">Web App</div>
+                        <div class="project-image">
+                            <img src="assets/img/project-academic.png" alt="Academic Organizer Project">
+                            <div class="project-overlay">
+                                <span>Kelola Tugas & Eksperimen Akademik</span>
                             </div>
-                            <span class="exp-date">Sep 2024</span>
                         </div>
-                        <div class="exp-card">
-                            <div class="exp-role">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                    <polyline points="14 2 14 8 20 8"/>
-                                    <line x1="16" y1="13" x2="8" y2="13"/>
-                                    <line x1="16" y1="17" x2="8" y2="17"/>
-                                    <polyline points="10 9 9 9 8 9"/>
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
                                 </svg>
-                                Divisi Tata Tertib dan Evaluasi
                             </div>
-                            <p class="exp-desc">Bertanggung jawab dalam pengawasan dan evaluasi kegiatan PKKMB mahasiswa baru</p>
+                            <h3 class="project-title">Academic Organizer</h3>
+                        </div>
+                        <p class="project-description">
+                            Aplikasi manajemen tugas akademik dengan AI Assistant. Fitur tracking deadline, log
+                            eksperimen, dan statistik progress akademik.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://muhrafi-fsdev.github.io/AcademicOrganizer/" target="_blank"
+                                class="btn btn-primary btn-sm">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/muhrafi-fsdev/AcademicOrganizer" target="_blank"
+                                class="btn btn-outline btn-sm">
+                                <span>GitHub</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- RAYSTORE Project -->
+                    <div class="project-card" data-project="raystore">
+                        <div class="project-badge">E-Commerce</div>
+                        <div class="project-image">
+                            <img src="assets/img/project-raystore.png" alt="RAYSTORE Project">
+                            <div class="project-overlay">
+                                <span>Top Up Game Murah & Cepat</span>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </div>
+                            <h3 class="project-title">RAYSTORE</h3>
+                        </div>
+                        <p class="project-description">
+                            Platform top up game termurah se-Indonesia. Tersedia Mobile Legends, PUBG, FF, Steam Wallet,
+                            dan Aplikasi Premium dengan membership system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://muhrafi-fsdev.github.io/Raystore-topup/" target="_blank"
+                                class="btn btn-primary btn-sm">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1-2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/muhrafi-fsdev/Raystore-topup" target="_blank"
+                                class="btn btn-outline btn-sm">
+                                <span>GitHub</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cuaca Nusantara Project -->
+                    <div class="project-card" data-project="cuaca">
+                        <div class="project-badge">Weather App</div>
+                        <div class="project-image">
+                            <img src="assets/img/project-cuaca.png" alt="Cuaca Nusantara Project">
+                            <div class="project-overlay">
+                                <span>Prakiraan Cuaca Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+                                </svg>
+                            </div>
+                            <h3 class="project-title">Cuaca Nusantara</h3>
+                        </div>
+                        <p class="project-description">
+                            Aplikasi prakiraan cuaca Indonesia dengan informasi cuaca real-time, monitoring gempa bumi,
+                            kondisi maritim, dan peringatan dini BMKG.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">BMKG API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://muhrafi-fsdev.github.io/WeathWebs/" target="_blank"
+                                class="btn btn-primary btn-sm">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1-2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/muhrafi-fsdev/WeathWebs" target="_blank"
+                                class="btn btn-outline btn-sm">
+                                <span>GitHub</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Social Project Section -->
-    <section class="social-project" id="social-project">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">07</span>
-                <h2 class="section-title">Social Project</h2>
-            </div>
-            
-            <div class="social-grid fade-in">
-                <!-- Project 1 - SAVIA -->
-                <div class="social-card featured">
-                    <div class="social-badge">Featured</div>
-                    <div class="social-image">
-                        <img src="assets/img/social-savia.png" alt="SAVIA Project">
-                    </div>
-                    <div class="social-content">
-                        <div class="social-date">Des 2025</div>
-                        <h3 class="social-title">Smart Aqua Village For Integrated Access</h3>
-                        <p class="social-org">CSR Telkom Indonesia</p>
-                        <div class="social-role">
-                            <span class="role-label">Role:</span>
-                            <span class="role-value">Fullstack Developer</span>
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">03</span>
+                    <h2 class="section-title">Keahlian</h2>
+                </div>
+
+                <div class="skills-grid fade-in">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                            Frontend
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-level="advanced">HTML5</span>
+                            <span class="skill-tag" data-level="advanced">CSS3</span>
+                            <span class="skill-tag" data-level="advanced">JavaScript</span>
+                            <span class="skill-tag" data-level="intermediate">React</span>
+                            <span class="skill-tag" data-level="intermediate">Next.js</span>
+                            <span class="skill-tag" data-level="advanced">Tailwind CSS</span>
+                            <span class="skill-tag" data-level="intermediate">Bootstrap</span>
                         </div>
-                        <p class="social-desc">Core Team SAVIA - Sistem IoT monitoring kualitas air untuk desa dengan integrasi sensor dan notifikasi real-time</p>
-                        <div class="social-tags">
-                            <span>IoT</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>Innovation</span>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                            </svg>
+                            Backend & Database
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-level="advanced">PHP</span>
+                            <span class="skill-tag" data-level="advanced">MySQL</span>
+                            <span class="skill-tag" data-level="intermediate">REST API</span>
+                            <span class="skill-tag" data-level="beginner">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                            Tools
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-level="advanced">Git</span>
+                            <span class="skill-tag" data-level="advanced">GitHub</span>
+                            <span class="skill-tag" data-level="intermediate">VS Code</span>
+                            <span class="skill-tag" data-level="intermediate">Figma</span>
+                            <span class="skill-tag" data-level="intermediate">Postman</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                            Workflow
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-level="intermediate">Agile</span>
+                            <span class="skill-tag" data-level="advanced">Team Collaboration</span>
+                            <span class="skill-tag" data-level="intermediate">Problem Solving</span>
+                            <span class="skill-tag" data-level="intermediate">Clean Code</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Project 2 - Harmony IoT -->
-                <div class="social-card">
-                    <div class="social-image">
-                        <img src="assets/img/social-harmony.png" alt="Harmony IoT Project">
-                    </div>
-                    <div class="social-content">
-                        <div class="social-date">Des 2024</div>
-                        <h3 class="social-title">Harmony-IoT</h3>
-                        <p class="social-org">Innovillage 2024</p>
-                        <div class="social-role">
-                            <span class="role-label">Role:</span>
-                            <span class="role-value">Team Support</span>
+        <!-- Education Section -->
+        <section class="education" id="education">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">04</span>
+                    <h2 class="section-title">Pendidikan</h2>
+                </div>
+
+                <div class="education-timeline fade-in">
+                    <!-- Telkom University -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
                         </div>
-                        <p class="social-desc">Mendukung Team Musketeers dalam program inovasi dan pemberdayaan masyarakat desa</p>
-                        <div class="social-tags">
-                            <span>Community</span>
-                            <span>Innovation</span>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <span class="date-badge">2023 - Sekarang</span>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="institution-logo">
+                                        <img src="assets/img/logo-telkom.png" alt="Telkom University">
+                                    </div>
+                                    <div class="institution-info">
+                                        <h3 class="institution-name">TELKOM UNIVERSITY JAKARTA</h3>
+                                        <span class="institution-type">Perguruan Tinggi</span>
+                                    </div>
+                                </div>
+                                <ul class="timeline-details">
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <polyline points="9 11 12 14 22 4" />
+                                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                                        </svg>
+                                        Telecommunication Engineering
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                        </svg>
+                                        GPA: 3.58/4.00 (Semester 5)
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                        Active student in organizations
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SMAN 44 Jakarta -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <span class="date-badge">2020 - 2023</span>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="institution-logo">
+                                        <img src="assets/img/logo-sman44.png" alt="SMAN 44 Jakarta">
+                                    </div>
+                                    <div class="institution-info">
+                                        <h3 class="institution-name">SMAN 44 JAKARTA</h3>
+                                        <span class="institution-type">Sekolah Menengah Atas</span>
+                                    </div>
+                                </div>
+                                <ul class="timeline-details">
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <polyline points="9 11 12 14 22 4" />
+                                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                                        </svg>
+                                        Science Major
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                        </svg>
+                                        Graduation Score: 92
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                            <path d="M4 22h16" />
+                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                                        </svg>
+                                        Top 10 Best Value Graduates 2023
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">08</span>
-                <h2 class="section-title">Hubungi Saya</h2>
-            </div>
-            
-            <div class="contact-content fade-in">
-                <p class="contact-intro">
-                    Tertarik berkolaborasi atau punya pertanyaan? Klik salah satu ikon di bawah untuk menghubungi saya.
-                </p>
-                
-                <div class="contact-icons">
-                    <!-- Email -->
-                    <a href="mailto:rafi.ps200804@gmail.com" class="contact-icon-link" title="Email">
-                        <div class="icon-wrapper email">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
+        <!-- Certificates Section -->
+        <section class="certificates" id="certificates">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">05</span>
+                    <h2 class="section-title">Sertifikat</h2>
+                </div>
+
+                <div class="certificates-grid fade-in">
+                    <!-- Certificate 1 - AI Course -->
+                    <div class="certificate-card">
+                        <div class="cert-ribbon">
+                            <span>Terbaru</span>
+                        </div>
+                        <div class="cert-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z" />
+                                <circle cx="12" cy="14" r="2" />
+                                <path d="M12 16v2" />
                             </svg>
                         </div>
-                        <span class="icon-label">Email</span>
-                    </a>
-                    
-                    <!-- GitHub -->
-                    <a href="https://github.com/muhrafi-fsdev" target="_blank" class="contact-icon-link" title="GitHub">
-                        <div class="icon-wrapper github">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        <div class="cert-date">Des 2025</div>
+                        <h3 class="cert-title">Artificial Intelligence Course</h3>
+                        <p class="cert-issuer">Microsoft Learn</p>
+                        <div class="cert-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            Verified
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 - IoT Workshop -->
+                    <div class="certificate-card">
+                        <div class="cert-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                             </svg>
                         </div>
-                        <span class="icon-label">GitHub</span>
-                    </a>
-                    
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/muhammad-rafi-priyo-sembodo-10233428b/" target="_blank" class="contact-icon-link" title="LinkedIn">
-                        <div class="icon-wrapper linkedin">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        <div class="cert-date">Jun 2024</div>
+                        <h3 class="cert-title">Workshop Analog Digital Sensor and Actuator with IOT</h3>
+                        <p class="cert-issuer">Telkom University Jakarta</p>
+                        <div class="cert-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            Verified
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 - Cisco -->
+                    <div class="certificate-card">
+                        <div class="cert-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                             </svg>
                         </div>
-                        <span class="icon-label">LinkedIn</span>
-                    </a>
-                    
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/mhmmd_rayfy/" target="_blank" class="contact-icon-link" title="Instagram">
-                        <div class="icon-wrapper instagram">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        <div class="cert-date">Jun 2025</div>
+                        <h3 class="cert-title">Introduction to Networks</h3>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <div class="cert-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            Verified
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 - Basic Programming -->
+                    <div class="certificate-card">
+                        <div class="cert-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
                             </svg>
                         </div>
-                        <span class="icon-label">Instagram</span>
-                    </a>
+                        <div class="cert-date">Apr 2023</div>
+                        <h3 class="cert-title">Basic Programming Course</h3>
+                        <p class="cert-issuer">Binus University Bekasi</p>
+                        <div class="cert-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            Verified
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">
-                    © 2026 Muhammad Rafi Priyo Sembodo. All rights reserved.
-                </p>
-                <p class="footer-credit">
-                    <span class="footer-tech">HTML • CSS • JavaScript • PHP</span>
-                </p>
-            </div>
-        </div>
-    </footer>
+        <!-- Experience Section -->
+        <section class="experience" id="experience">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">06</span>
+                    <h2 class="section-title">Pengalaman</h2>
+                </div>
 
-    <!-- Demo Modals -->
-    <div class="modal-overlay" id="modalOverlay" onclick="closeDemo()"></div>
-    
-    <!-- SAVIA Demo Modal -->
-    <div class="demo-modal" id="saviaModal">
-        <div class="modal-header">
-            <div class="modal-title">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-                <span>SAVIA - Demo Interaktif</span>
+                <div class="experience-timeline fade-in">
+                    <!-- Experience 1 -->
+                    <div class="exp-item">
+                        <div class="exp-marker">
+                            <div class="exp-dot"></div>
+                            <div class="exp-line"></div>
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <div class="exp-title-wrap">
+                                    <h3 class="exp-title">Studium General Agama Islam</h3>
+                                    <span class="exp-company">Telkom University Jakarta</span>
+                                </div>
+                                <span class="exp-date">Nov 2025</span>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-role">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    Penanggung Jawab Tempat Pelaksana
+                                </div>
+                                <p class="exp-desc">Program Studi Sistem Informasi dan Desain Komunikasi Visual Angkatan
+                                    2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="exp-item">
+                        <div class="exp-marker">
+                            <div class="exp-dot"></div>
+                            <div class="exp-line"></div>
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <div class="exp-title-wrap">
+                                    <h3 class="exp-title">Studium General Agama Islam</h3>
+                                    <span class="exp-company">Telkom University Jakarta</span>
+                                </div>
+                                <span class="exp-date">Mei 2025</span>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-role">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    Penanggung Jawab Tempat Pelaksana
+                                </div>
+                                <p class="exp-desc">Program Studi Teknik Telekomunikasi Angkatan 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="exp-item">
+                        <div class="exp-marker">
+                            <div class="exp-dot"></div>
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-header">
+                                <div class="exp-title-wrap">
+                                    <h3 class="exp-title">Kepanitiaan PKKMB</h3>
+                                    <span class="exp-company">Telkom University Jakarta 2024</span>
+                                </div>
+                                <span class="exp-date">Sep 2024</span>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-role">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                        <polyline points="14 2 14 8 20 8" />
+                                        <line x1="16" y1="13" x2="8" y2="13" />
+                                        <line x1="16" y1="17" x2="8" y2="17" />
+                                        <polyline points="10 9 9 9 8 9" />
+                                    </svg>
+                                    Divisi Tata Tertib dan Evaluasi
+                                </div>
+                                <p class="exp-desc">Bertanggung jawab dalam pengawasan dan evaluasi kegiatan PKKMB
+                                    mahasiswa baru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="modal-close" onclick="closeDemo()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
-        </div>
-        <div class="modal-notice">
-            ⚠️ Demo ini menggunakan data dummy. Tidak ada data asli yang ditampilkan.
-        </div>
-        <div class="modal-body" id="saviaContent">
-            <!-- SAVIA Demo Content -->
-        </div>
-    </div>
-    
-    <!-- TITAN Demo Modal -->
-    <div class="demo-modal" id="titanModal">
-        <div class="modal-header">
-            <div class="modal-title">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <line x1="3" y1="9" x2="21" y2="9"/>
-                    <line x1="9" y1="21" x2="9" y2="9"/>
-                </svg>
-                <span>TITAN - Demo Interaktif</span>
+        </section>
+
+        <!-- Social Project Section -->
+        <section class="social-project" id="social-project">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">07</span>
+                    <h2 class="section-title">Social Project</h2>
+                </div>
+
+                <div class="social-grid fade-in">
+                    <!-- Project 1 - SAVIA -->
+                    <div class="social-card featured">
+                        <div class="social-badge">Featured</div>
+                        <div class="social-image">
+                            <img src="assets/img/social-savia.png" alt="SAVIA Project">
+                        </div>
+                        <div class="social-content">
+                            <div class="social-date">Des 2025</div>
+                            <h3 class="social-title">Smart Aqua Village For Integrated Access</h3>
+                            <p class="social-org">CSR Telkom Indonesia</p>
+                            <div class="social-role">
+                                <span class="role-label">Role:</span>
+                                <span class="role-value">Fullstack Developer</span>
+                            </div>
+                            <p class="social-desc">Core Team SAVIA - Sistem IoT monitoring kualitas air untuk desa
+                                dengan integrasi sensor dan notifikasi real-time</p>
+                            <div class="social-tags">
+                                <span>IoT</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - Harmony IoT -->
+                    <div class="social-card">
+                        <div class="social-image">
+                            <img src="assets/img/social-harmony.png" alt="Harmony IoT Project">
+                        </div>
+                        <div class="social-content">
+                            <div class="social-date">Des 2024</div>
+                            <h3 class="social-title">Harmony-IoT</h3>
+                            <p class="social-org">Innovillage 2024</p>
+                            <div class="social-role">
+                                <span class="role-label">Role:</span>
+                                <span class="role-value">Team Support</span>
+                            </div>
+                            <p class="social-desc">Mendukung Team Musketeers dalam program inovasi dan pemberdayaan
+                                masyarakat desa</p>
+                            <div class="social-tags">
+                                <span>Community</span>
+                                <span>Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="modal-close" onclick="closeDemo()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
-        </div>
-        <div class="modal-notice">
-            ⚠️ Demo ini menggunakan data dummy. Tidak ada data asli yang ditampilkan.
-        </div>
-        <div class="modal-body" id="titanContent">
-            <!-- TITAN Demo Content -->
-        </div>
-    </div>
-    
-    <!-- Academic Demo Modal -->
-    <div class="demo-modal" id="academicModal">
-        <div class="modal-header">
-            <div class="modal-title">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                </svg>
-                <span>Academic Organizer - Demo Interaktif</span>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">08</span>
+                    <h2 class="section-title">Hubungi Saya</h2>
+                </div>
+
+                <div class="contact-content fade-in">
+                    <p class="contact-intro">
+                        Tertarik berkolaborasi atau punya pertanyaan? Klik salah satu ikon di bawah untuk menghubungi
+                        saya.
+                    </p>
+
+                    <div class="contact-icons">
+                        <!-- Email -->
+                        <a href="mailto:rafi.ps200804@gmail.com" class="contact-icon-link" title="Email">
+                            <div class="icon-wrapper email">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <span class="icon-label">Email</span>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/muhrafi-fsdev" target="_blank" class="contact-icon-link"
+                            title="GitHub">
+                            <div class="icon-wrapper github">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </div>
+                            <span class="icon-label">GitHub</span>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/muhammad-rafi-priyo-sembodo-10233428b/" target="_blank"
+                            class="contact-icon-link" title="LinkedIn">
+                            <div class="icon-wrapper linkedin">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </div>
+                            <span class="icon-label">LinkedIn</span>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/mhmmd_rayfy/" target="_blank" class="contact-icon-link"
+                            title="Instagram">
+                            <div class="icon-wrapper instagram">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </div>
+                            <span class="icon-label">Instagram</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <button class="modal-close" onclick="closeDemo()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p class="footer-text">
+                        © 2026 Muhammad Rafi Priyo Sembodo. All rights reserved.
+                    </p>
+                    <p class="footer-credit">
+                        <span class="footer-tech">HTML • CSS • JavaScript • PHP</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Demo Modals -->
+        <div class="modal-overlay" id="modalOverlay" onclick="closeDemo()"></div>
+
+        <!-- SAVIA Demo Modal -->
+        <div class="demo-modal" id="saviaModal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <span>SAVIA - Demo Interaktif</span>
+                </div>
+                <button class="modal-close" onclick="closeDemo()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-notice">
+                ⚠️ Demo ini menggunakan data dummy. Tidak ada data asli yang ditampilkan.
+            </div>
+            <div class="modal-body" id="saviaContent">
+                <!-- SAVIA Demo Content -->
+            </div>
         </div>
-        <div class="modal-notice">
-            ⚠️ Demo ini menggunakan data dummy. Data tidak tersimpan permanen.
+
+        <!-- TITAN Demo Modal -->
+        <div class="demo-modal" id="titanModal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <line x1="3" y1="9" x2="21" y2="9" />
+                        <line x1="9" y1="21" x2="9" y2="9" />
+                    </svg>
+                    <span>TITAN - Demo Interaktif</span>
+                </div>
+                <button class="modal-close" onclick="closeDemo()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-notice">
+                ⚠️ Demo ini menggunakan data dummy. Tidak ada data asli yang ditampilkan.
+            </div>
+            <div class="modal-body" id="titanContent">
+                <!-- TITAN Demo Content -->
+            </div>
         </div>
-        <div class="modal-body" id="academicContent">
-            <!-- Academic Demo Content -->
+
+        <!-- Academic Demo Modal -->
+        <div class="demo-modal" id="academicModal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                    </svg>
+                    <span>Academic Organizer - Demo Interaktif</span>
+                </div>
+                <button class="modal-close" onclick="closeDemo()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-notice">
+                ⚠️ Demo ini menggunakan data dummy. Data tidak tersimpan permanen.
+            </div>
+            <div class="modal-body" id="academicContent">
+                <!-- Academic Demo Content -->
+            </div>
         </div>
-    </div>
 
     </div><!-- End of portfolio-main -->
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/landing.js"></script>
 </body>
+
 </html>

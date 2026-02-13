@@ -383,7 +383,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #0d1421 0%, #1a237e 35%, #283593 65%, #1a237e 100%);
+    background: linear-gradient(135deg, #0d1421 0%, #1a237e 35%, #283593 65%, #1a237e 100%) !important;
     transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
     overflow: hidden;
 }
