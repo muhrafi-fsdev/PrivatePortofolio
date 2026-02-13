@@ -940,6 +940,46 @@
 }
 
 /* ============================================
+   SCORE BADGES - GUNDAM STYLE PILLS
+   ============================================ */
+.score-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gd-blue-dark);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border-left: 3px solid var(--gd-blue);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.score-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.score-value {
+    color: var(--gd-yellow);
+    font-weight: 700;
+}
+
+.score-note {
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+/* Gold variant for graduation */
+.score-badge--gold {
+    border-left-color: var(--gd-yellow);
+}
+
+.score-badge--gold .score-value {
+    color: var(--gd-yellow);
+}
+
+/* ============================================
    CONTACT SECTION - GUNDAM STYLE
    ============================================ */
 .contact {
