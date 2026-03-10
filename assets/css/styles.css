@@ -680,9 +680,10 @@ section {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 60px;
-    align-items: start;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .about-text p {
@@ -707,9 +708,96 @@ section {
     font-weight: 600;
 }
 
-.about-stats {
+/* Profile Photo */
+.about-photo-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.about-photo {
+    position: relative;
+    width: 320px;
+    max-width: 100%;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    filter: grayscale(10%);
+    transition: all 0.4s ease;
+}
+
+.about-photo:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.photo-frame-accent {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+.photo-frame-top {
+    top: -8px;
+    right: -8px;
+    border-top: 3px solid var(--primary-purple);
+    border-right: 3px solid var(--primary-purple);
+}
+
+.photo-frame-bottom {
+    bottom: -8px;
+    left: -8px;
+    border-bottom: 3px solid var(--primary-purple);
+    border-left: 3px solid var(--primary-purple);
+}
+
+.photo-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: var(--white);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.5px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    }
+
+    50% {
+        opacity: 0.8;
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    }
+}
+
+.about-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 16px;
 }
 
@@ -2734,6 +2822,19 @@ section {
     .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .about-photo-wrapper {
+        order: -1;
+    }
+
+    .about-photo {
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    .about-photo img {
+        height: 320px;
     }
 
     .about-text {

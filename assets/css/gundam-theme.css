@@ -649,6 +649,42 @@
     pointer-events: none;
 }
 
+/* ============================================
+   ABOUT PHOTO - GUNDAM STYLE
+   ============================================ */
+.about-photo {
+    border: 3px solid var(--gd-blue) !important;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    overflow: hidden;
+}
+
+.about-photo img {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.photo-frame-top {
+    border-color: var(--gd-yellow) !important;
+}
+
+.photo-frame-bottom {
+    border-color: var(--gd-red) !important;
+}
+
+.photo-status {
+    background: var(--gd-blue-dark) !important;
+    color: var(--gd-yellow) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem !important;
+}
+
+.about-photo:hover {
+    box-shadow: 0 0 20px rgba(255, 214, 0, 0.3), 0 0 40px rgba(211, 47, 47, 0.15);
+}
+
 /* Project Cards - Mecha Panels */
 .project-card {
     background: var(--gd-white) !important;
