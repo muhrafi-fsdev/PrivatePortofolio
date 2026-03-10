@@ -653,13 +653,28 @@
    ABOUT PHOTO - GUNDAM STYLE
    ============================================ */
 .about-photo {
-    border: 3px solid var(--gd-blue) !important;
-    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
-    overflow: hidden;
+    border: none !important;
+    clip-path: none;
+    overflow: visible;
+    background: transparent;
 }
 
 .about-photo img {
-    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    clip-path: none;
+    border-radius: 0;
+}
+
+/* Bottom gradient fade */
+.about-photo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, var(--gd-blue-dark) 0%, transparent 100%);
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 .photo-frame-top {
@@ -671,18 +686,19 @@
 }
 
 .photo-status {
-    background: var(--gd-blue-dark) !important;
-    color: var(--gd-yellow) !important;
+    background: var(--gd-red) !important;
+    color: var(--gd-white) !important;
     border-radius: 0 !important;
     clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.75rem !important;
+    padding: 10px 24px !important;
 }
 
 .about-photo:hover {
-    box-shadow: 0 0 20px rgba(255, 214, 0, 0.3), 0 0 40px rgba(211, 47, 47, 0.15);
+    box-shadow: none;
 }
 
 /* Project Cards - Mecha Panels */
